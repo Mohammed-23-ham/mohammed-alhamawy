@@ -157,3 +157,6 @@
     @apply font-sans;
   }
 }
+*, a, ul, ol, li, button, span, p, div {
+  cursor: none !important;
+}
