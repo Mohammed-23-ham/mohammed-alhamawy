@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" important;
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -117,35 +117,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-.main-col {
-  color: #1C352D;
-}
-
-.main-bg {
-  background-color: #1C352D;
-}
-.soft-col {
-  color: #A6B28B;
-}
-
-.soft-bg {
-  background-color: #A6B28B;
-}
-.sec-col {
-  color: #F5C9B0;
-}
-
-.sec-bg {
-  background-color: #F5C9B0;
-}
-.light-col {
-  color: #F9F6F3;
-}
-
-.light-bg {
-  background-color: #F9F6F3;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -159,4 +130,33 @@
 }
 *, a, ul, ol, li, button, span, p, div {
   cursor: none !important;
+  
+  .main-col {
+    color: #24453b;
+  }
+  
+  .main-bg {
+    background-color: #24453b;
+  }
+  .soft-col {
+    color: #A6B28B;
+  }
+  
+  .soft-bg {
+    background-color: #A6B28B;
+  }
+  .sec-col {
+    color: #F5C9B0;
+  }
+  
+  .sec-bg {
+    background-color: #F5C9B0;
+  }
+  .light-col {
+    color: #F9F6F3;
+  }
+  
+  .light-bg {
+    background-color: #F9F6F3;
+  }
 }
