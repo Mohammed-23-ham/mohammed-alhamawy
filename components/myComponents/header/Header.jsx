@@ -1,4 +1,5 @@
 'use client';
+import NavLinks  from './NavLinks';
 
 import { useState, useEffect } from 'react';
 
@@ -24,12 +25,7 @@ const Header = () => {
                     </span>
                 </div>
             </div>
-            <div className='flex items-center justify-center gap-4'>
-                <span className='main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out' id='hero'>Hero</span>
-                <span className='main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out' id='skills'>Skills</span>
-                <span className='main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out' id='gallary'>Gallary</span>
-                <span className='main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out' id='contact'>Contact</span>
-            </div>
+            <NavLinks />
         </div>
     )
 }
