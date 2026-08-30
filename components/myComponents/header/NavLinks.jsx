@@ -28,10 +28,10 @@ function NavLinks() {
         return () => obs.disconnect()
     }, [])
 
-    const linkClass = (id) => `inline-block main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out ${active===id ? 'sec-col' : ''}`
+    const linkClass = (id) => `inline-block main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out text-sm sm:text-md ${active===id ? 'sec-col' : ''}`
 
     return (
-        <div className='flex items-center justify-center gap-3 sm:gap-4'>
+        <div className='flex items-center justify-center gap-4'>
             <a href="#hero" className={linkClass('hero')}>Hero</a>
             <a href="#skills" className={linkClass('skills')}>Skills</a>
             <a href="#gallary" className={linkClass('gallary')}>Gallary</a>
