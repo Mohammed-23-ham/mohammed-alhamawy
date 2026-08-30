@@ -16,11 +16,11 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='sticky top-0 left-0 flex justify-between items-center px-6 py-4 bg-white'>
+        <div className='sticky top-0 left-0 flex justify-between items-center px-6 py-4 backdrop-blur-xl'>
             <div className="flex items-center justify-center">
                 <div className="group inline-flex items-center ">
-                    <span className="sec-col text-2xl">M</span>
-                    <span className={`text-2xl overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-in-out main-col ${isExpanded ? 'max-w-xs opacity-100' : 'max-w-0 opacity-0'}`}>
+                    <span className="sec-col text-xl sm:text-2xl">M</span>
+                    <span className={`text-xl sm:text-2xl overflow-hidden whitespace-nowrap opacity-0 transition-all duration-500 ease-in-out main-col ${isExpanded ? 'max-w-xs opacity-100' : 'max-w-0 opacity-0'}`}>
                         ohammed
                     </span>
                 </div>

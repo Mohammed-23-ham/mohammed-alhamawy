@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallary = () => {
   return (
-    <div>Gallary</div>
+    <div id='gallary'>Gallary</div>
   )
 }
 
