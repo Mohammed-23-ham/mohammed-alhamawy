@@ -3,7 +3,7 @@ import { BsDot } from "react-icons/bs";
 const Skills = () => {
   return (
     <div id="skills" className="mx-5">
-      <h2 className= "my-13 text-sm soft-col tracking-widest">Tools I work with</h2>
+      <h2 className= "my-13 text-sm soft-col tracking-widest text-center sm:text-start">Tools I work with</h2>
       <div className="grid grid-cols-1 gap-7 my-4 sm:grid-cols-2 md:grid-cols-3">
         <div className="w-full border rounded-xl p-2 border-[#5f7a5e] hover:-top-2.5 transition-all duration-300 group hover:-translate-y-1 hover:border-[#24453b] hover:shadow-md hover:shadow-[#24453b58]">
           <span className="flex flex-row items-center gap-2 ">
