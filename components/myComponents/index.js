@@ -1,2 +1,7 @@
 export { default as Header } from './header/Header'
 export { default as Scrollbar } from './scrollBar/ScrollBar'
+export { default as Footer } from './footer/Footer'
+export { default as Hero } from './hero/Hero'
+export { default as Skills } from './skills-me/Skills'
+export { default as Gallary } from './gallary/Gallary'
+export { default as Contact } from './contact/Contact'

@@ -1,12 +1,17 @@
-import { Header, Scrollbar } from "@/components/myComponents/index";
+import { Header, Scrollbar, Hero, Skills, Gallary, Contact, Footer } from "@/components/myComponents/index";
 
 export default function Home() {
   return (
     <>
       <Header />
+    <div className='max-w-250 w-full mx-auto'>
       <Scrollbar />
-    <div id="hero" className="h-[200vh]"></div>
-    <div id="gallary" className="h-[200vh]">sssssssssssssssssssssssssssssss</div>
+      <Hero />
+      <Skills />
+      <Gallary />
+      <Contact />
+      <Footer />
+    </div>
     </>
   );
 }
