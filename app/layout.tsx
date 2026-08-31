@@ -20,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col light-bg h-[10000vh]">
+      <body className="min-h-full flex flex-col light-bg">
         <SmoothCursor />
         {children}
         </body>

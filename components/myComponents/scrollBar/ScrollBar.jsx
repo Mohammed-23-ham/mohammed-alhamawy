@@ -38,7 +38,7 @@ const ScrollBar = () => {
     const focus4 = active === 'contact'
 
     return (
-        <ul className='min-w-16 fixed right-1 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-10 hidden sm:flex'>
+        <ul className='min-w-16 fixed right-1 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-10 hidden xl:flex'>
             <li tabIndex={0} onFocus={() => setActive('hero')} onBlur={() => setActive('')} onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} className='relative flex justify-center items-center gap-4'>
                 <a href="#hero" className={(hover1 || focus1) ? 'main-col absolute right-full mr-1 whitespace-nowrap transition-opacity duration-300 opacity-100 text-xs text-center mb-0.5 pointer-events-auto' : 'soft-col absolute right-full mr-1 whitespace-nowrap transition-opacity duration-300 opacity-0 pointer-events-none'}>Hero</a>
                 <a href="#hero" className={'h-0.5 main-bg rounded-full inline-block transition-all duration-300 ' + (focus1 ? 'w-5 opacity-100' : 'w-0 opacity-0')}></a>
