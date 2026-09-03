@@ -15,8 +15,8 @@ const Contact = () => {
       await navigator.clipboard.writeText(email)
       setCopied(true)
       setTimeout(() => setCopied(false), 3000)
-    } catch (error) {
-      console.error('Failed to copy email:', error)
+    } catch {
+      setCopied(false)
     }
   }
 
@@ -52,7 +52,6 @@ const Contact = () => {
       setFormStatus({ type: 'success', message: 'Your message has been sent successfully.' });
       form.reset();
     } catch (error) {
-      console.error('Failed to submit form:', error);
       setFormStatus({
         type: 'error',
         message: error.message || 'Something went wrong while sending the email. Please try again later.'
@@ -69,7 +68,7 @@ const Contact = () => {
         </span>
         <h2 className="my-2 text-2xl font-bold main-col">Let's Build Something Together</h2>
         <p className="soft-col text-sm text-center md:text-start">Whether it's a new WordPress build, a Next or React front-end — tell me what you're working on and I'll come back with a plan.</p>
-        <div className="flex w-full gap-3 p-3 border rounded-2xl border-[#5f7a5e65] my-5 mx- flex-row items-center justify-between">
+        <div className="my-5 flex w-full flex-row items-center justify-between gap-3 rounded-2xl border border-[#5f7a5e65] p-3">
           <div className="flex items-center gap-2 justify-start min-w-0">
             <CiMail className="main-col shrink-0" />
             <h3 className="text-sm main-col break-all">{email}</h3>
@@ -80,8 +79,8 @@ const Contact = () => {
             className="flex flex-row w-fit items-center text-xs main-col gap-1 border border-[#5f7a5e65] rounded-2xl p-2 self-start sm:self-center"
           >
             <AiOutlineCopy />
-            <p className={copied ? 'translate-all duration-300 opacity-100 w-10' : 'translate-all duration-300 opacity-0 w-0'}>Copied</p>
-            <p className={copied ? 'translate-all duration-300 opacity-0  w-0' : 'translate-all duration-300 opacity-100 w-10'}>Copy</p>
+            <p className={copied ? 'transition-all duration-300 opacity-100 w-10' : 'transition-all duration-300 opacity-0 w-0'}>Copied</p>
+            <p className={copied ? 'transition-all duration-300 opacity-0 w-0' : 'transition-all duration-300 opacity-100 w-10'}>Copy</p>
           </button>
         </div>
       </div>

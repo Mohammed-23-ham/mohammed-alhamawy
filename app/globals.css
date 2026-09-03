@@ -129,36 +129,40 @@
     scroll-behavior: smooth;
   }
 }
-*, a, ul, ol, li, button, span, p, div {
-  cursor: none !important;
-  
-  .main-col {
-    color: #24453b;
+@media (any-hover: hover) and (any-pointer: fine) {
+  *, a, ul, ol, li, button, span, p, div {
+    cursor: none !important;
   }
-  
-  .main-bg {
-    background-color: #24453b;
-  }
-  .soft-col {
-    color: #5f7a5e;
-  }
-  
-  .soft-bg {
-    background-color: #5f7a5e;
-  }
-  .sec-col {
-    color: #F5C9B0;
-  }
-  
-  .sec-bg {
-    background-color: #F5C9B0;
-  }
-  .light-col {
-    color: #F9F6F3;
-  }
-  
-  .light-bg {
+}
 
-    background-color: #F9F6F3;
-  }
+.main-col {
+  color: #24453b;
+}
+
+.main-bg {
+  background-color: #24453b;
+}
+
+.soft-col {
+  color: #5f7a5e;
+}
+
+.soft-bg {
+  background-color: #5f7a5e;
+}
+
+.sec-col {
+  color: #f5c9b0;
+}
+
+.sec-bg {
+  background-color: #f5c9b0;
+}
+
+.light-col {
+  color: #f9f6f3;
+}
+
+.light-bg {
+  background-color: #f9f6f3;
 }

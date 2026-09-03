@@ -16,7 +16,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='sticky top-0 left-0 flex justify-between items-center px-4 py-2 backdrop-blur-xl z-50'>
+        <header className='sticky top-0 left-0 z-50 flex flex-wrap items-center justify-between gap-2 px-4 py-2 backdrop-blur-xl'>
             <div className="flex items-center justify-center">
                 <div className="group inline-flex items-center ">
                     <span className="sec-col text-xl sm:text-2xl">M</span>
@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
             </div>
             <NavLinks />
-        </div>
+        </header>
     )
 }
 

@@ -1,6 +1,15 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 export async function POST(request: Request) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
@@ -23,6 +32,11 @@ export async function POST(request: Request) {
       );
     }
 
+    const safeName = escapeHtml(String(name));
+    const safeEmail = escapeHtml(String(email));
+    const safeSubject = escapeHtml(String(subject));
+    const safeMessage = escapeHtml(String(message)).replace(/\n/g, '<br />');
+
     const result = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: [process.env.MY_PERSONAL_EMAIL || 'alhamawymohamed@gmail.com'],
@@ -30,11 +44,11 @@ export async function POST(request: Request) {
       subject: `Portfolio contact: ${subject}`,
       html: `
         <h2>New portfolio message</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Subject:</strong> ${safeSubject}</p>
         <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br />')}</p>
+        <p>${safeMessage}</p>
       `,
     });
 
