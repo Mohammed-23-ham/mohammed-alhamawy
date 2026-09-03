@@ -7,7 +7,7 @@ const Gallary = () => {
   const [activeFilter, setActiveFilter] = useState("all")
 
   return (
-    <div id='gallary' className='mx-1 my-7 gap-3 border-y px-3 py-7 border-[#5f7a5e65]'>
+    <div id='gallery' className='mx-1 my-7 gap-3 border-y px-3 py-7 border-[#5f7a5e65]'>
       <span className="my-13 text-sm soft-col tracking-widest text-center sm:text-start">Portfolio</span>
       <h2 className="my-2 text-2xl font-bold main-col">Featured Work</h2>
       <p className="soft-col text-[16px] font-normal my-5 w-full text-center sm:text-start sm:w-[90%] md:w-[65%]">A selection of client and product builds — each one shipped with a measurable performance or maintainability win.</p>

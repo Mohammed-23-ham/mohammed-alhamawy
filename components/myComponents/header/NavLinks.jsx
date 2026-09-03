@@ -1,42 +1,56 @@
-'use client';
-import { useState, useEffect } from "react";
+'use client'
+import { useEffect, useState } from 'react'
+
+const navigationItems = [
+    { id: 'hero', label: 'Hero' },
+    { id: 'gallery', label: 'Gallery' },
+    { id: 'contact', label: 'Contact' },
+]
 
 function NavLinks() {
-    const [active, setActive] = useState('')
+    const [active, setActive] = useState('hero')
 
     useEffect(() => {
-        const ids = ['hero', 'skills', 'gallary', 'contact']
-        const obs = new IntersectionObserver((entries) => {
-            // pick the most visible entry
-            let best = { id: '', ratio: 0 }
-            entries.forEach(e => {
-                const id = e.target?.id
-                if (!id) return
-                if (e.isIntersecting && e.intersectionRatio > best.ratio) {
-                    best = { id, ratio: e.intersectionRatio }
-                }
+        const updateActiveSection = () => {
+            const scrollPosition = window.scrollY + 80
+            let currentId = navigationItems[0].id
+
+            navigationItems.forEach(({ id }) => {
+                const section = document.getElementById(id)
+                if (!section) return
+
+                const sectionTop = section.getBoundingClientRect().top + window.scrollY
+                if (sectionTop <= scrollPosition) currentId = id
             })
-            setActive(best.id)
-        }, { threshold: [0.25, 0.5, 0.75] })
 
-        ids.forEach(id => {
-            const el = document.getElementById(id)
-            if (el) obs.observe(el)
-        })
+            setActive(currentId)
+        }
 
-        // cleanup
-        return () => obs.disconnect()
+        updateActiveSection()
+        window.addEventListener('scroll', updateActiveSection, { passive: true })
+        window.addEventListener('resize', updateActiveSection)
+
+        return () => {
+            window.removeEventListener('scroll', updateActiveSection)
+            window.removeEventListener('resize', updateActiveSection)
+        }
     }, [])
 
-    const linkClass = (id) => `inline-block main-col hover:text-[#F5C9B0] transition-all duration-300 ease-in-out text-sm sm:text-md ${active===id ? 'sec-col' : ''}`
-
     return (
-        <div className='flex items-center justify-center gap-4'>
-            <a href="#hero" className={linkClass('hero')}>Hero</a>
-            <a href="#skills" className={linkClass('skills')}>Skills</a>
-            <a href="#gallary" className={linkClass('gallary')}>Gallary</a>
-            <a href="#contact" className={linkClass('contact')}>Contact</a>
-        </div>
+        <nav className='flex items-center justify-center gap-4' aria-label='Main navigation'>
+            {navigationItems.map(({ id, label }) => (
+                <a
+                    key={id}
+                    href={`#${id}`}
+                    onClick={() => setActive(id)}
+                    className={`inline-block ${active === id ? 'sec-col' : 'main-col'} text-sm transition-all duration-300 ease-in-out hover:text-[#F5C9B0] sm:text-md`}
+                    aria-current={active === id ? 'page' : undefined}
+                >
+                    {label}
+                </a>
+            ))}
+        </nav>
     )
 }
+
 export default NavLinks
