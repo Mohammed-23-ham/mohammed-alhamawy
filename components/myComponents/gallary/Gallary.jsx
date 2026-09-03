@@ -1,4 +1,5 @@
 'use client'
+import { AiOutlineArrowRight } from "react-icons/ai"; 
 import { useState } from "react"
 import Image from "next/image"
 import { Categories, ProjectData } from '@/public/data/projectData'
@@ -24,11 +25,10 @@ const Gallary = () => {
               type="button"
               onClick={() => setActiveFilter(value)}
               aria-pressed={activeFilter === value}
-              className={`whitespace-nowrap rounded-4xl px-2 py-1 text-sm transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5f7a5e] ${
-                activeFilter === value
+              className={`whitespace-nowrap rounded-4xl px-2 py-1 text-sm transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5f7a5e] ${activeFilter === value
                   ? "sec-bg soft-col"
                   : "bg-transparent soft-col hover:sec-bg"
-              }`}
+                }`}
             >
               {label}
             </button>
@@ -51,7 +51,9 @@ const Gallary = () => {
                     <span key={index} className="rounded-full bg-[#5f7a5e2f] px-2 py-1 text-xs soft-col">{tech}</span>
                   ))}
                 </div>
-                <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block rounded bg-[#5f7a5e] px-3 py-1 text-sm font-medium text-white transition-all duration-300 hover:bg-[#5f7a5e9c]">View Project</a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="mt-2 rounded-2xl bg-[#5f7a5e] px-4 py-2 w-fit text-xs font-normal
+                 text-white transition-all duration-300 hover:bg-[#5f7a5e9c] flex flex-row justify-center
+                  items-center gap-3">View Project <AiOutlineArrowRight className="font-medium" /></a>
               </div>
             </div>
           ))}
