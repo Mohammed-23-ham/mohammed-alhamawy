@@ -8,12 +8,12 @@ const Gallary = () => {
   const [activeFilter, setActiveFilter] = useState("all")
 
   return (
-    <div id='gallery' className='mx-1 my-7 gap-3 border-y px-3 py-7 border-[#5f7a5e65]'>
-      <span className="my-13 text-sm soft-col tracking-widest text-center sm:text-start">Portfolio</span>
-      <h2 className="my-2 text-2xl font-bold main-col">Featured Work</h2>
-      <p className="soft-col text-[16px] font-normal my-5 w-full text-center sm:text-start sm:w-[90%] md:w-[65%]">A selection of client and product builds — each one shipped with a measurable performance or maintainability win.</p>
-      <div className="flex flex-col mx-2 my-5">
-        <div role="group" aria-label="Filter projects" className="flex w-fit max-w-full flex-row overflow-x-auto rounded-4xl border border-[#5f7a5e65] bg-[#5f7a5e2f] my-5 p-1">
+    <div id='gallery' className='mx-1 my-7 border-y px-3 py-7 border-[#5f7a5e65] flex flex-col'>
+      <span className="my-5 text-sm soft-col tracking-widest text-center sm:text-start">Portfolio</span>
+      <h2 className="text-2xl font-bold main-col text-center sm:text-start">Featured Work</h2>
+      <p className="soft-col text-[16px] font-normal my-3 w-full text-center sm:text-start sm:w-[90%] md:w-[65%]">A selection of client and product builds — each one shipped with a measurable performance or maintainability win.</p>
+      <div className="flex flex-col mx-2 my-3">
+        <div role="group" aria-label="Filter projects" className="flex w-fit max-w-full flex-row overflow-x-auto rounded-4xl border border-[#5f7a5e65] bg-[#5f7a5e2f] my-5 p-1 mx-auto sm:mx-0">
           {[
             ["all", "All"],
             ["wordpress", "WordPress"],
