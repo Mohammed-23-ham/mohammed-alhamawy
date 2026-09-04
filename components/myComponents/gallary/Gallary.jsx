@@ -42,7 +42,16 @@ const Gallary = () => {
             return false
           }).map((project) => (
             <div key={project.key} className="flex h-full flex-col gap-3 rounded-lg border border-[#5f7a5e65] transition-all duration-300 hover:scale-[1.02] hover:border-[#5f7a5e]">
-              <Image src={project.img} alt={project.title} width={800} height={450} className="h-50 w-full rounded-lg object-cover" />
+              <Image
+                src={project.img}
+                alt={`${project.title} project preview`}
+                width={800}
+                height={450}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={75}
+                loading="lazy"
+                className="h-50 w-full rounded-lg object-cover"
+              />
               <div className="flex m-3 flex-1 flex-col gap-2">
                 <h3 className="text-lg font-semibold main-col">{project.title}</h3>
                 <p className="soft-col text-sm">{project.description}</p>

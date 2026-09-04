@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="max-w-250 w-full mx-auto">
+      <main className="max-w-250 w-full mx-auto">
         <Scrollbar />
         <Hero />
         <Skills />
         <Gallary />
         <Contact />
         <Footer />
-      </div>
+      </main>
     </>
   );
 }
