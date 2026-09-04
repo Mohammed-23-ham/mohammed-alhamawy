@@ -20,6 +20,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
+      <head>
+        <meta property="og:image" content="./enterface.jpg" />
+      </head>
       <body className="min-h-full flex flex-col light-bg">
         <SmoothCursor />
         {children}
