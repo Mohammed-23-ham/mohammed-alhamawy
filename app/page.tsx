@@ -7,6 +7,7 @@ import {
   Contact,
   Footer,
 } from "@/components/myComponents/index";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
+      <Analytics  />
     </>
   );
 }
