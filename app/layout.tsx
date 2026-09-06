@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { SmoothCursor } from "@/components/ui/smooth-cursor"
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Mohammed Al-Hamawy is a front-end and WordPress developer building fast Next.js apps and scalable WordPress websites.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   ),
   alternates: {
     canonical: "/",
@@ -33,7 +33,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Mohammed Al-Hamawy",
-    images: [{ url: "/imgs/lP.jpg", width: 1200, height: 630, alt: "Mohammed Al-Hamawy portfolio" }],
+    images: [
+      {
+        url: "/imgs/lP.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mohammed Al-Hamawy portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -50,15 +57,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    
     <html
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="google-site-verification"
+          content="X-gvcvXbikIWv4dfaHxkPzEaJy-NiDn5GZfDdQdO66I"
+        />
+      </head>
       <body className="min-h-full flex flex-col light-bg">
         <SmoothCursor />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
