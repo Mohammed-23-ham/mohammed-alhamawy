@@ -67,14 +67,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           name="google-site-verification"
           content="X-gvcvXbikIWv4dfaHxkPzEaJy-NiDn5GZfDdQdO66I"
         />
-         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGBBTKX4BG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SGBBTKX4BG');
-</script>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </head>
      
       <body className="min-h-full flex flex-col light-bg">
