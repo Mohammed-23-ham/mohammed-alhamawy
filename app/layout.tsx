@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Mohammed Al-Hamawy",
+    "mohammed Al-hamawy Portfolio",
+    "mohammed al-hamawy",
+    "mohammed alhamawy",
+    "mohammed alhamawy portfolio",
     "front-end developer",
     "Next.js developer",
     "WordPress developer",
