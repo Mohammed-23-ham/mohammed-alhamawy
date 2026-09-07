@@ -20,7 +20,7 @@ const Hero = () => {
           <a href="#gallery" className="flex gap-1 w-28 justify-between text-xs text-center text-white main-bg rounded-2xl px-3 py-2 items-center transition-all duration-300 hover:bg-[#5f7a5e]">
         My Projects<BiDownArrowAlt className="text-sm" />
         </a>
-        <a href="#gallery" className="flex gap-1 w-28 justify-between text-xs text-center bg-transparent main-col border border-[#24453b] rounded-2xl px-3 py-2 items-center transition-all duration-300 hover:bg-[#5f7a5e]">
+        <a href="https://drive.google.com/file/d/1ID5yXvDpwMKJeZ0RUROH7jQlyV5Zm_L8/view?usp=drive_open" target="_blank" className="flex gap-1 w-28 justify-between text-xs text-center bg-transparent main-col border border-[#24453b] rounded-2xl px-3 py-2 items-center transition-all duration-300 hover:bg-[#5f7a5e]">
           My Resume<AiFillFileText />
         </a>
         </div>
