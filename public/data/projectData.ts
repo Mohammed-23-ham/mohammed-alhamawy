@@ -3,8 +3,22 @@ export const Categories = {
   WordPress: "Wordpress",
   React: "React.js",
   Next: "Next.js",
+} as const;
+
+export type ProjectCategory = (typeof Categories)[keyof typeof Categories];
+
+export type Project = {
+  key: string;
+  title: string;
+  description: string;
+  img: string;
+  category: ProjectCategory;
+  badge: string;
+  tech: string[];
+  url: string;
 };
-export const ProjectData = [
+
+export const ProjectData: Project[] = [
   {
     key: "p5",
     title: "Abha MDL",
