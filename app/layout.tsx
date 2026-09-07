@@ -3,6 +3,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
+const socialImage = "/imgs/lP.jpg?v=2";
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Mohammed Al-Hamawy is a front-end and WordPress developer building fast Next.js apps and scalable WordPress websites.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://mohammed-alhamawy.vercel.app",
   ),
   alternates: {
     canonical: "/",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Mohammed Al-Hamawy",
     images: [
       {
-        url: "/imgs/lP.jpg",
+        url: socialImage,
         width: 1200,
         height: 630,
         alt: "Mohammed Al-Hamawy portfolio",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     title: "Mohammed Al-Hamawy | Front-End & WordPress Developer",
     description:
       "Fast Next.js apps and scalable WordPress websites built with a focus on UX and Core Web Vitals.",
-    images: ["/imgs/lP.jpg"],
+    images: [socialImage],
   },
   robots: {
     index: true,
