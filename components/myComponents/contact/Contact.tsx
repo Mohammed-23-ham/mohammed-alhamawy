@@ -2,7 +2,7 @@
 import { AiOutlineCopy } from "react-icons/ai";
 import { CiMail } from "react-icons/ci";
 import { BsDot } from "react-icons/bs";
-import React, { useState } from 'react'
+import React, { useState, type FormEvent } from 'react'
 
 const email = 'alhamawymohamed@gmail.com';
 
@@ -20,7 +20,7 @@ const Contact = () => {
     }
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     try {
@@ -54,7 +54,9 @@ const Contact = () => {
     } catch (error) {
       setFormStatus({
         type: 'error',
-        message: error.message || 'Something went wrong while sending the email. Please try again later.'
+        message: error instanceof Error
+          ? error.message
+          : 'Something went wrong while sending the email. Please try again later.'
       });
     }
   }
@@ -66,8 +68,8 @@ const Contact = () => {
           <BsDot className="mb-px" />
           Available for new projects
         </span>
-        <h2 className="my-2 text-2xl font-bold main-col">Let's Build Something Together</h2>
-        <p className="soft-col text-sm text-center md:text-start">Whether it's a new WordPress build, a Next or React front-end — tell me what you're working on and I'll come back with a plan.</p>
+        <h2 className="my-2 text-2xl font-bold main-col">Let&apos;s Build Something Together</h2>
+        <p className="soft-col text-sm text-center md:text-start">Whether it&apos;s a new WordPress build, a Next or React front-end — tell me what you&apos;re working on and I&apos;ll come back with a plan.</p>
         <div className="my-5 flex w-full flex-row items-center justify-between gap-3 rounded-2xl border border-[#5f7a5e65] p-3">
           <div className="flex items-center gap-2 justify-start min-w-0">
             <CiMail className="main-col shrink-0" />

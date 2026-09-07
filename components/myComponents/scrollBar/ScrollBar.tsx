@@ -20,7 +20,7 @@ const ScrollBar = () => {
 
             const sections = ids
                 .map(id => document.getElementById(id))
-                .filter(Boolean)
+                .filter((section): section is HTMLElement => section !== null)
             const screenCenter = window.innerHeight / 2
             const currentSection = sections.find(section => {
                 const bounds = section.getBoundingClientRect()
@@ -32,13 +32,15 @@ const ScrollBar = () => {
                 return
             }
 
-            const closestSection = sections.reduce((closest, section) => {
+            const closestSection = sections.reduce<HTMLElement | null>((closest, section) => {
+                if (!closest) return section
+
                 const sectionCenter = section.getBoundingClientRect().top + section.offsetHeight / 2
                 const closestCenter = closest.getBoundingClientRect().top + closest.offsetHeight / 2
                 return Math.abs(sectionCenter - screenCenter) < Math.abs(closestCenter - screenCenter)
                     ? section
                     : closest
-            })
+            }, null)
             setActive(closestSection?.id || '')
         }
 
