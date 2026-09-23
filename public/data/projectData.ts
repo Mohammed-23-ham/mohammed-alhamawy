@@ -136,7 +136,7 @@ export const ProjectData: Project[] = [
     img: "/imgs/tutask.jpg",
     category: Categories.Next,
     badge: "Next.js",
-    tech: ["Next.js", "React", "Tailwind CSS", "Shadcn UI", "Pochetbase"],
+    tech: ["Next.js", "React", "Tailwind CSS", "Shadcn UI", "Pocketbase"],
     url: "https://tu-task.vercel.app/",
   },
   {
