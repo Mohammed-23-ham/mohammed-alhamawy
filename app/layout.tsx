@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import { Analytics } from "@vercel/analytics/next";
 
 const socialImage = "/imgs/lP.jpg?v=2";
 
@@ -97,6 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <SmoothCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
