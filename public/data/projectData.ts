@@ -151,6 +151,17 @@ export const ProjectData: Project[] = [
   },
   {
     key: "p3",
+    title: "Medo-tore",
+    description:
+      "A modern e-commerce website built with Next.js, React, TypeScript, Tailwind CSS, and Supabase, featuring a sleek design and seamless user experience for online shopping.",
+    img: "/imgs/medotore.png",
+    category: Categories.React,
+    badge: "Next.js",
+    tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Shadcn UI", "API"],
+    url: "https://medo-tore.vercel.app/",
+  },
+  {
+    key: "p4",
     title: "To-Do App",
     description:
       "A full-stack task management application built with React, powered by Supabase for secure user authentication (login and sign-up) and real-time data management with secure table synchronization. ",
