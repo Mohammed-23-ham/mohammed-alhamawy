@@ -130,6 +130,17 @@ export const ProjectData: Project[] = [
     url: "https://tabuk.mdl.com.sa",
   },
   {
+    key: "p13",
+    title: "Medo-tore",
+    description:
+      "A modern e-commerce website built with Next.js, React, TypeScript, Tailwind CSS, and Supabase, featuring a sleek design and seamless user experience for online shopping.",
+    img: "/imgs/medotore.png",
+    category: Categories.React,
+    badge: "Next.js",
+    tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Shadcn UI", "API"],
+    url: "https://medo-tore.vercel.app/",
+  },
+  {
     key: "p11",
     title: "TuTask",
     description: "A modern task management application enabling users to create, organize, and track tasks through authenticated dashboards, built with Next.js, React, TypeScript, Tailwind CSS, and PocketBase.",
@@ -148,17 +159,6 @@ export const ProjectData: Project[] = [
     badge: "Next.js",
     tech: ["Next.js", "React"],
     url: "https://luxury-mochi-31dc95.netlify.app/",
-  },
-  {
-    key: "p13",
-    title: "Medo-tore",
-    description:
-      "A modern e-commerce website built with Next.js, React, TypeScript, Tailwind CSS, and Supabase, featuring a sleek design and seamless user experience for online shopping.",
-    img: "/imgs/medotore.png",
-    category: Categories.React,
-    badge: "Next.js",
-    tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Shadcn UI", "API"],
-    url: "https://medo-tore.vercel.app/",
   },
   {
     key: "p14",
