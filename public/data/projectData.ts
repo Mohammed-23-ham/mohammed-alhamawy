@@ -20,7 +20,7 @@ export type Project = {
 
 export const ProjectData: Project[] = [
   {
-    key: "p5",
+    key: "p1",
     title: "Abha MDL",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -31,7 +31,7 @@ export const ProjectData: Project[] = [
     url: "https://abha.mdl.com.sa",
   },
   {
-    key: "p7",
+    key: "p2",
     title: "BMS SA",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -42,7 +42,7 @@ export const ProjectData: Project[] = [
     url: "https://bms.sa",
   },
   {
-    key: "p8",
+    key: "p3",
     title: "Dammam MDL",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -53,7 +53,7 @@ export const ProjectData: Project[] = [
     url: "https://dammam.mdl.com.sa",
   },
   {
-    key: "p9",
+    key: "p4",
     title: "Mohammed Aldossary",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -64,7 +64,7 @@ export const ProjectData: Project[] = [
     url: "https://mohammedaldosari.sa",
   },
   {
-    key: "p10",
+    key: "p5",
     title: "Jeddah MDL",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -75,7 +75,7 @@ export const ProjectData: Project[] = [
     url: "https://jeddah.mdl.com.sa",
   },
   {
-    key: "p11",
+    key: "p6",
     title: "MDL Saudi Arabia",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -86,7 +86,7 @@ export const ProjectData: Project[] = [
     url: "https://mdl.com.sa",
   },
   {
-    key: "p12",
+    key: "p7",
     title: "Mohamie Jeddah",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -97,7 +97,7 @@ export const ProjectData: Project[] = [
     url: "https://mohamie-jeddah.com",
   },
   {
-    key: "p13",
+    key: "p8",
     title: "Mohamie Riyadh",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -108,7 +108,7 @@ export const ProjectData: Project[] = [
     url: "https://mohamie-riyadh.com",
   },
   {
-    key: "p14",
+    key: "p9",
     title: "Riyadh MDL",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -119,7 +119,7 @@ export const ProjectData: Project[] = [
     url: "https://riyadh.mdl.com.sa",
   },
   {
-    key: "p15",
+    key: "p10",
     title: "tabuk MDL",
     description:
       "A professional, fully responsive WordPress website built using Elementor, featuring custom design layouts and optimized performance for a seamless user experience.",
@@ -130,7 +130,7 @@ export const ProjectData: Project[] = [
     url: "https://tabuk.mdl.com.sa",
   },
   {
-    key: "p1",
+    key: "p11",
     title: "TuTask",
     description: "A modern task management application enabling users to create, organize, and track tasks through authenticated dashboards, built with Next.js, React, TypeScript, Tailwind CSS, and PocketBase.",
     img: "/imgs/tutask.jpg",
@@ -140,7 +140,7 @@ export const ProjectData: Project[] = [
     url: "https://tu-task.vercel.app/",
   },
   {
-    key: "p2",
+    key: "p12",
     title: "Tic-tac-toe",
     description: "Simple XO Game built with Next.js ",
     img: "/imgs/xo.jpg",
@@ -150,7 +150,7 @@ export const ProjectData: Project[] = [
     url: "https://luxury-mochi-31dc95.netlify.app/",
   },
   {
-    key: "p3",
+    key: "p13",
     title: "Medo-tore",
     description:
       "A modern e-commerce website built with Next.js, React, TypeScript, Tailwind CSS, and Supabase, featuring a sleek design and seamless user experience for online shopping.",
@@ -161,7 +161,7 @@ export const ProjectData: Project[] = [
     url: "https://medo-tore.vercel.app/",
   },
   {
-    key: "p4",
+    key: "p14",
     title: "To-Do App",
     description:
       "A full-stack task management application built with React, powered by Supabase for secure user authentication (login and sign-up) and real-time data management with secure table synchronization. ",
@@ -172,7 +172,7 @@ export const ProjectData: Project[] = [
     url: "https://todo-two-sigma-82.vercel.app/",
   },
   {
-    key: "p4",
+    key: "p15",
     title: "Note App",
     description:
       "A fast and seamless note-taking application, combining the high-performance processing of Next.js with the elegance of fully customized Shadcn UI components via Tailwind CSS.",
@@ -183,7 +183,7 @@ export const ProjectData: Project[] = [
     url: "https://note-app-phi-five.vercel.app/",
   },
   {
-    key: "p5",
+    key: "p16",
     title: "Old Portfolio",
     description:
       "My old portfolio built with Next.js, showcasing my projects and skills in web development.",
